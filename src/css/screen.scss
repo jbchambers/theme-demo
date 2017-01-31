@@ -4,3 +4,272 @@
 @import 'base/global';
 @import 'plugins/slick';
 @import 'plugins/slick-theme';
+@import 'plugins/nice-select';
+
+
+/*----- MIXINS -----*/
+@mixin font($font-family, $font-size, $line-height, $letter-spacing) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+.gradient {
+  background: #ff5200;
+  background: -moz-linear-gradient(top, #ff5200 0%, #ff0000 100%);
+  background: -webkit-linear-gradient(top, #ff5200 0%, #ff0000 100%);
+  background: linear-gradient(to bottom, #ff5200 0%, #ff0000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5200', endColorstr='#ff0000', GradientType=0);
+}
+
+/*----- TYPOGRAPHY -----*/
+h1, h2, h3, h4, p, ul, ol {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  @include font($ks, 55px, 48px, .25px);
+  color: $black;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  &:after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: $red;
+    display: block;
+    margin: 45px 0;
+  }
+  @media (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+h2, .h2 {
+  @include font($lbi, 20px, 30px, .5px);
+  color: $light-blue;
+  margin-bottom: 10px;
+}
+
+h3, .h3 {
+  @include font($k, 22px, 33px, .25px);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: $red;
+}
+
+p, li {
+  @include font($l, 17px, 33px, .25px);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer !important;
+  &:hover {
+    color: #000;
+  }
+}
+
+a, button, input, textarea, svg {
+  transition: all .3s ease-in-out;
+}
+
+ul {
+  margin-left: 5px;
+  li {
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding-left: 40px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      position: absolute;
+      left: 0;
+      top: 14px;
+      background: $blue;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/*----- GLOBAL -----*/
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  overflow-x: hidden;
+  position: relative;
+  color: $black;
+}
+
+section {
+  display: block;
+  width: 100%;
+  float: left;
+  clear: both;
+  position: relative;
+}
+
+.desktop-only {
+  display: block;
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none !important;
+  @media(max-width: 767px) {
+    display: block;
+  }
+}
+
+#field_1_7 {
+  display: none;
+}
+
+* {
+  &:focus {
+    outline: 0;
+  }
+}
+
+/*----- INTERNAL PAGES -----*/
+.container {
+  width: 1170px;
+  margin: auto;
+  float: none;
+  display: block;
+  @media (max-width: 1199px) {
+    width: 970px;
+  }
+  @media (max-width: 991px) {
+    width: 710px;
+  }
+  @media (max-width: 767px) {
+    width: calc(100% - 60px);
+  }
+}
+
+.page-content {
+  padding: 150px 0;
+  width: 100%;
+  float: left;
+  .column {
+    position: relative;
+    float: left;
+  }
+  .main-content {
+    width: 68%;
+    left: 32%;
+  }
+  .sidebar {
+    width: 25%;
+    margin-right: 7%;
+    right: 68%;
+    .title, .widgettitle {
+      @include font($lbi, 30px, 30px, .5px);
+      text-transform: lowercase;
+      color: $blue;
+      margin-bottom: 30px;
+      padding-left: 15px;
+    }
+    .widget {
+      margin-bottom: 60px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+    a {
+      @include font($k, 22px, 1, .5px);
+      color: $black;
+      display: block;
+      padding: 25px 0 25px 10px;
+      border-bottom: 1px solid #d4d4d4;
+      text-transform: uppercase;
+      &:hover {
+        background: $red;
+        color: #fff;
+      }
+    }
+    .menu-item-has-children {
+      position: relative;
+      &:after {
+        content: '';
+        width: 11px;
+        height: 5px;
+        position: absolute;
+        background: url(../images/nav-arrow.png) center center no-repeat;
+        right: 15px;
+        top: 33px;
+      }
+    }
+    .sub-menu {
+      display: none;
+      a {
+        background: $grey;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+  .page-intro {
+    p {
+      @extend h2;
+      margin-bottom: 50px;
+    }
+  }
+  a {
+    @include font ($ks, 18px, 1, 0);
+    color: $red;
+    &:hover {
+      color: $blue;
+    }
+  }
+  /*----- MOBILE -----*/
+  @media (max-width: 1199px) {
+    padding: 90px 0;
+    .main-content, .sidebar {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 60px 0;
+    .main-content, .sidebar {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+    .sidebar {
+      padding: 30px 0;
+    }
+  }
+}
