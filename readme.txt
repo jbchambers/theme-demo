@@ -1,69 +1,41 @@
-Quench
 
-Gulp is a command-line JavaScript task runner that automates your web workflow by way of self-scripted tasks. Quench easily creates those self-scripted tasks based on your custom input.
+ENTER THE MAMP DIRECTORY
+========================
+cd MAMP
 
-On quenchjs.com
-===============
+CREATE "NEW-PROJECT" FOLDER, ENTER THE FOLDER
+============================================
+mkdir new-project
+cd new-project
 
-After selecting your custom "Gulp Options," your gulpfile.js and package.json are automatically created for you in your browser. At this point you have a few options. You can:
-
-1. Copy and paste these files into your own project. Here you'll need to make sure all of your directories are set up properly and then you can continue on to the "Installing Supplemental Files" section.
-
-2. Save these files into your own project. Like copy and paste, you'll need to make sure all of your directories are set up properly and then you can continue on to the "Installing Supplemental Files" section.
-
-3. If you're using a supported browser, you can click the "Save Project as Zip" button to download these and any supplemental files as a Zip file. The Zip file includes gulpfile.js, package.json, as well as an appropriate directory structure and a few starter style files if appropriate. See the "Using the Zip File" section.
-
-
-Using the Zip File
+DOWNLOAD WORDPRESS
 ==================
+wp core download
 
-Download the Zip file and extract it to your desired project location.
+ENTER "WP-CONTENT" FOLDER
+=======================
+cd wp-content
 
+ADD STANDARD PLUGINS TO "PLUGINS" FOLDER
+=========================================
+git clone http://tinyurl.com/ilawyerplugins plugins
 
-Installing Supplemental Files
+ENTER "THEMES' FOLDER
+====================
+cd themes
+
+DOWNLOAD THEME INTO "ILAWYER" FOLDER
+=====================================
+git clone http://tinyurl.com/ilawyerthemes lawyer
+
+ENTER "ILAWYER" THEME FOLDER
 =============================
+cd ilawyer
 
-For all of this magic to work, your computer needs a few extra files to get Gulp up and running in your project.
+INSTALL GULP, SASS, BROWSER SYNC
+=================================
+npm install
 
-You'll need to make sure you have both [Node](http://nodejs.org) and [Gulp](http://gulpjs.com) installed before moving forward. If you already have both, keep on going, and if not, you'll only need to install them once.
-
-Navigate to your project directory using the command line and run the following command:
-    npm install
-
-That's it! You're ready to start using Gulp.
-
-
-Using Gulp
-==========
-
-Default Task
-------------
-
-    gulp
-
-Running the default task automatically watches your project folders for any changes and runs the accompanying task. For example, if you've elected to run tasks on your JavaScript, anytime you change a JavaScript file gulp will automatically run those tasks, including a browser refresh if you've included BrowserSync.
-
-CSS
----
-    gulp styles
-
-Running the gulp styles task will run your selected CSS tasks once.
-
-JavaScript
-----------
-
-    gulp scripts
-
-Running the gulp scripts task will run your selected JavaScript tasks once.
-
-Images
-------
-
-    gulp images
-
-Running the gulp images task will run your selected image tasks once.
-
-Feedback
+RUN GULP
 ========
-
-I'd love to hear your thoughts on Quench, any suggestions you might have, or any bugs you come across. Send all feedback to: feedback@quenchjs.com
+gulp
