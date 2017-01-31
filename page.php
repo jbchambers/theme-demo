@@ -1,20 +1,24 @@
-<?php get_header();?>
+<?php get_header(); ?>
 <div class="page-content clearfix">
     <div class="container">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="row">
-
-                <div class="col-md-9 col-md-push-4">
-                    <h1><?php the_title();?></h1>
-                    <?php the_content();?>
-                </div>
-                <div class="col-md-3 col-md-pull-9 sidebar">
-                    <?php wp_nav_menu(['menu' => 'Practice Areas']); ?>
-                </div>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <div class="main-content column">
+                <h1><?php the_title(); ?></h1>
+                <?php if (get_field('page_intro')) { ?>
+                    <div class="page-intro">
+                        <?php the_field('page_intro'); ?>
+                    </div>
+                <?php } ?>
+                <?php the_content(); ?>
             </div>
-        <?php endwhile; else : ?>
-            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+            <div class="sidebar column">
+                <div class="title">Practice Areas</div>
+                <?php wp_nav_menu(['menu' => 'Practice Areas']); ?>
+            </div>
+        <?php endwhile;
+        else : ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
     </div>
 </div>
-<?php get_footer();?>
+<?php get_footer(); ?>
