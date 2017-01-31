@@ -104,3 +104,30 @@ function add_slug_body_class($classes)
 }
 
 add_filter('body_class', 'add_slug_body_class');
+
+
+/* GRAVITY FORMS: MOVE SCRIPTS TO FOOTER
+-------------------------------------------------------------- */
+add_filter('gform_init_scripts_footer', '__return_true');
+
+/* ACF: CREATE OPTIONS PAGE
+-------------------------------------------------------------- */
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Theme General Settings',
+        'menu_title' => 'Theme Settings',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
+}
+
+/* ALLOW SVGs IN MEDIA UPLOAD
+-------------------------------------------------------------- */
+function cc_mime_types($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+
+add_filter('upload_mimes', 'cc_mime_types');
