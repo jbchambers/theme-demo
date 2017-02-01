@@ -32,7 +32,7 @@ cd themes
 =====================================
 DOWNLOAD THEME INTO "ILAWYER" FOLDER
 =====================================
-git clone http://tinyurl.com/ilawyerthemes ilawyer
+git clone http://tinyurl.com/ilawyertheme ilawyer
 
 =============================
 ENTER "ILAWYER" THEME FOLDER
