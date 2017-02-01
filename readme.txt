@@ -1,4 +1,3 @@
-
 ENTER THE MAMP DIRECTORY
 ========================
 cd MAMP
@@ -26,7 +25,7 @@ cd themes
 
 DOWNLOAD THEME INTO "ILAWYER" FOLDER
 =====================================
-git clone http://tinyurl.com/ilawyerthemes lawyer
+git clone http://tinyurl.com/ilawyerthemes ilawyer
 
 ENTER "ILAWYER" THEME FOLDER
 =============================
