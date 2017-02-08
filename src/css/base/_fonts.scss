@@ -1,101 +1,59 @@
 @font-face {
-  font-family: "Proxima Nova Regular";
-  src: url(../fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix);
-  src: url(../fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix) format("eot"),
-  url(../fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2) format("woff2"),
-  url(../fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff) format("woff"),
-  url(../fonts/2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf) format("truetype"),
-  url(../fonts/ab9cd062-380f-4b53-b1a7-c0bec7402235.svg#ab9cd062-380f-4b53-b1a7-c0bec7402235) format("svg");
+  font-family: "FreightSans Semibold";
+  src: url(../fonts/d154fe01-4538-4277-9e56-74538134d43b.eot?#iefix);
+  src: url(../fonts/d154fe01-4538-4277-9e56-74538134d43b.eot?#iefix) format("eot"), url(../fonts/84efe8b8-d2b9-464c-93b4-1237a3cb52c3.woff2) format("woff2"), url(../fonts/0bef275a-3f3b-4cd1-8aa0-3535eefb27c0.woff) format("woff"), url(../fonts/e0be4e39-367d-4f71-84cf-5b18ccc68510.ttf) format("truetype"), url(../fonts/ca102283-f31e-40d2-9f2d-0e7b61d830c8.svg#ca102283-f31e-40d2-9f2d-0e7b61d830c8) format("svg");
 }
 
 @font-face {
-  font-family: "Proxima Nova Semibold";
-  src: url(../fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix);
-  src: url(../fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix) format("eot"),
-  url(../fonts/ae47a7f5-89da-4879-b934-29722c3dd451.woff2) format("woff2"),
-  url(../fonts/70ae52ec-d89b-4c6a-9402-854ebe423c54.woff) format("woff"),
-  url(../fonts/6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf) format("truetype"),
-  url(../fonts/ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg#ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c) format("svg");
+  font-family: "FreightSans Light";
+  src: url(../fonts/846d7f62-bc41-43d5-b9ef-515648c4bdf0.eot?#iefix);
+  src: url(../fonts/846d7f62-bc41-43d5-b9ef-515648c4bdf0.eot?#iefix) format("eot"), url(../fonts/489ddee0-ddda-430c-8f56-d5d8b204174c.woff2) format("woff2"), url(../fonts/52b03e8e-4c8e-46f6-a983-00f0ad55d35c.woff) format("woff"), url(../fonts/a5aef2f8-5790-40fa-b327-c05f50fc834e.ttf) format("truetype"), url(../fonts/b2ba0162-460f-4305-a3c9-254e61e94c91.svg#b2ba0162-460f-4305-a3c9-254e61e94c91) format("svg");
 }
 
 @font-face {
-  font-family: "Proxima Nova Bold";
-  src: url(../fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix);
-  src: url(../fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix) format("eot"),
-  url(../fonts/0d416408-95c6-4ad7-b08d-e60573d3b37d.woff2) format("woff2"),
-  url(../fonts/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff) format("woff"),
-  url(../fonts/4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf) format("truetype"),
-  url(../fonts/8152bc4e-d700-4c78-b6be-326893e6f53f.svg#8152bc4e-d700-4c78-b6be-326893e6f53f) format("svg");
+  font-family: "FreightSans Book";
+  src: url(../fonts/7f93f850-78bb-41eb-971c-f3f44a2556c9.eot?#iefix);
+  src: url(../fonts/7f93f850-78bb-41eb-971c-f3f44a2556c9.eot?#iefix) format("eot"), url(../fonts/4584c03e-44d8-41e0-9c6d-dcf1f5132fcf.woff2) format("woff2"), url(../fonts/e3a72cdd-96f7-4a6c-afd0-15448e1276a9.woff) format("woff"), url(../fonts/009ee2e0-5a09-49ca-9a1d-f0810c51d04f.ttf) format("truetype"), url(../fonts/b17b3560-ae34-4670-ae12-5604499e1c14.svg#b17b3560-ae34-4670-ae12-5604499e1c14) format("svg");
 }
 
 @font-face {
-  font-family: 'Khand Bold';
-  src: url(../fonts/khand-bold-webfont.woff2) format('woff2'),
-  url(../fonts/khand-bold-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "FreightSans Book Italic";
+  src: url(../fonts/236d4dfd-2468-45b7-ae10-353747f83afa.eot?#iefix);
+  src: url(../fonts/236d4dfd-2468-45b7-ae10-353747f83afa.eot?#iefix) format("eot"), url(../fonts/ff21981e-cfaa-480d-bbc4-a7094f9a4be2.woff2) format("woff2"), url(../fonts/72bcc0c5-6952-4534-91cc-24017617cd7c.woff) format("woff"), url(../fonts/903bc946-e210-4969-8985-d13f567a36ed.ttf) format("truetype"), url(../fonts/603febe6-e8fa-402a-8a90-99840bc5a03d.svg#603febe6-e8fa-402a-8a90-99840bc5a03d) format("svg");
 }
 
 @font-face {
-  font-family: 'Khand Light';
-  src: url(../fonts/khand-light-webfont.woff2) format('woff2'),
-  url(../fonts/khand-light-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "FreightSans Medium";
+  src: url(../fonts/687fec83-734b-43e3-a42b-85a235d322af.eot?#iefix);
+  src: url(../fonts/687fec83-734b-43e3-a42b-85a235d322af.eot?#iefix) format("eot"), url(../fonts/2d8fb109-df3a-4a54-839c-322ac0835e5c.woff2) format("woff2"), url(../fonts/04073950-358b-498e-b8af-db1063003e41.woff) format("woff"), url(../fonts/b76da73d-9344-4749-8e66-9783cee3e9bc.ttf) format("truetype"), url(../fonts/ef03658e-0cec-4e8e-9a84-623505b25c6f.svg#ef03658e-0cec-4e8e-9a84-623505b25c6f) format("svg");
 }
 
 @font-face {
-  font-family: 'Khand Medium';
-  src: url(../fonts/khand-medium-webfont.woff2) format('woff2'),
-  url(../fonts/khand-medium-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "FreightSans Bold";
+  src: url(../fonts/8a9b1e99-b9ef-4131-affb-58dd4bb8836e.eot?#iefix);
+  src: url(../fonts/8a9b1e99-b9ef-4131-affb-58dd4bb8836e.eot?#iefix) format("eot"), url(../fonts/d2a0a124-a5ff-400e-a992-a132814a3c31.woff2) format("woff2"), url(../fonts/1b9a845c-251c-4a39-bedf-f64e65de6719.woff) format("woff"), url(../fonts/2a68e830-949b-4969-8705-310271c184fb.ttf) format("truetype"), url(../fonts/c81ac268-5e87-4ada-8e90-b56123bc6bf5.svg#c81ac268-5e87-4ada-8e90-b56123bc6bf5) format("svg");
 }
 
 @font-face {
-  font-family: 'Khand Regular';
-  src: url(../fonts/khand-regular-webfont.woff2) format('woff2'),
-  url(../fonts/khand-regular-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "FreightSans Black";
+  src: url(../fonts/23c94692-1950-469e-9294-e7889d1ce89c.eot?#iefix);
+  src: url(../fonts/23c94692-1950-469e-9294-e7889d1ce89c.eot?#iefix) format("eot"), url(../fonts/149b5d44-0082-428a-8b55-bbb8071c62af.woff2) format("woff2"), url(../fonts/f9b92a5e-117b-4e08-9dd2-d97840b43168.woff) format("woff"), url(../fonts/ed8e3f0a-1da2-40a0-b7b2-7510fb14735e.ttf) format("truetype"), url(../fonts/a883a1ed-62de-4c2a-9c84-01430cb0bf4f.svg#a883a1ed-62de-4c2a-9c84-01430cb0bf4f) format("svg");
 }
 
 @font-face {
-  font-family: 'Khand Semibold';
-  src: url(../fonts/khand-semibold-webfont.woff2) format('woff2'),
-  url(../fonts/khand-semibold-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Utopia Regular";
+  src: url(../fonts/2a0c47b9-7c72-4622-a2a6-753b1928c4f7.eot?#iefix);
+  src: url(../fonts/2a0c47b9-7c72-4622-a2a6-753b1928c4f7.eot?#iefix) format("eot"), url(../fonts/d7079586-2da2-49e9-9ac2-9643ce1e6e9d.woff2) format("woff2"), url(../fonts/cf097660-b052-407e-8446-064d8b9e4efc.woff) format("woff"), url(../fonts/521c33af-0500-4311-ac9c-866d131d0dc5.ttf) format("truetype"), url(../fonts/de2ff455-5efa-4560-b525-48c8b68417be.svg#de2ff455-5efa-4560-b525-48c8b68417be) format("svg");
 }
 
 @font-face {
-  font-family: 'Lora Bold';
-  src: url(../fonts/lora-bold-webfont.woff2) format('woff2'),
-  url(../fonts/lora-bold-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Utopia Italic";
+  src: url(../fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix);
+  src: url(../fonts/d1496733-2656-4184-a72d-8a9abb8fad48.eot?#iefix) format("eot"), url(../fonts/b58a7ef2-1af1-4388-bea9-35a36e882eee.woff2) format("woff2"), url(../fonts/91100087-f732-4de0-aa71-80eccd860c00.woff) format("woff"), url(../fonts/ebb5c4d7-df95-4959-9bf3-9f1dbef0b9cd.ttf) format("truetype"), url(../fonts/0b69d819-2210-4ff4-ab5b-0838cc946334.svg#0b69d819-2210-4ff4-ab5b-0838cc946334) format("svg");
 }
 
 @font-face {
-  font-family: 'Lora Bold Italic';
-  src: url(../fonts/lora-bolditalic-webfont.woff2) format('woff2'),
-  url(../fonts/lora-bolditalic-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lora Italic';
-  src: url(../fonts/lora-italic-webfont.woff2) format('woff2'),
-  url(../fonts/lora-italic-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lora Regular';
-  src: url(../fonts/lora-regular-webfont.woff2) format('woff2'),
-  url(../fonts/lora-regular-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Utopia Bold";
+  src: url(../fonts/5a9f4a76-39ad-4893-a7c6-27840b6bc03c.eot?#iefix);
+  src: url(../fonts/5a9f4a76-39ad-4893-a7c6-27840b6bc03c.eot?#iefix) format("eot"), url(../fonts/033c5d49-c85b-41e0-a737-a20db01765e2.woff2) format("woff2"), url(../fonts/b4afd2bd-5ded-45ce-930a-91bcbd795971.woff) format("woff"), url(../fonts/458089c5-dfe5-4af9-8c14-ca3b91d09fd1.ttf) format("truetype"), url(../fonts/555811b3-72e5-44bb-a8db-c89fa420cc84.svg#555811b3-72e5-44bb-a8db-c89fa420cc84) format("svg");
 }

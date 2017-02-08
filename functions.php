@@ -6,14 +6,14 @@
 function theme_name_scripts()
 {
 
-    wp_enqueue_style('screen.css', get_template_directory_uri() . '/dist/styles/screen.css');
+    wp_enqueue_style('screen.css', get_template_directory_uri() . '/css/screen.css');
 
     wp_scripts()->add_data('jquery', 'group', 1);
     wp_scripts()->add_data('jquery-core', 'group', 1);
     wp_scripts()->add_data('jquery-migrate', 'group', 1);
-    wp_enqueue_script('slick-carousel.js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '', true);
-    wp_enqueue_script('match-height.js', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', array('jquery'), '', true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js',
+    wp_enqueue_script('slick-carousel.js', get_template_directory_uri() . '/js/slick.js', array('jquery'), '', true);
+    wp_enqueue_script('match-height.js', get_template_directory_uri() . '/js/match-height.js', array('jquery'), '', true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/site.js',
         array('jquery',
             'slick-carousel.js',
             'match-height.js'), '', true);
@@ -131,3 +131,14 @@ function cc_mime_types($mimes)
 }
 
 add_filter('upload_mimes', 'cc_mime_types');
+
+/* WP CUSTOMER REVIEWS
+-------------------------------------------------------------- */
+function fix_reviews_plugin()
+{
+    wp_deregister_script('wp-customer-reviews-3-frontend');
+    wp_enqueue_script('slick-carousel.js', get_home_url() . 'plugins/wp-customer-reviews/js/wp-customer-reviews.js', array('jquery'), '', true);
+
+}
+
+add_action('wp_enqueue_scripts', 'fix_reviews_plugin');
