@@ -1,41 +1,49 @@
 <footer>
-    <!-- FORM -->
-    <section class="form">
-        <div class="container">
-            <div class="title"><?php the_field('form_title', 'option'); ?></div>
-            <div class="tagline"><?php the_field('form_tagline', 'option'); ?></div>
-            <?php gravity_form(1, false, false, false, null, false); ?>
+    <!-- FOOTER FORM -->
+    <div class="footer-form">
+        <div class="title">
+            <span class="top">request a</span>
+            <span class="bottom"><i>free</i> consultation</span>
         </div>
-    </section>
-    <!-- LOCATIONS -->
-    <section class="locations">
-        <img class="logo" src="<?= get_stylesheet_directory_uri(); ?>/images/footer-logo.png" alt=""/>
+        <div class="tagline">No office visit required, we will get back to you to discuss the potential merit of your case.</div>
+        <?php gravity_form(1, false, false, false, null, false); ?>
+        <div class="required">* All Fields Required</div>
+    </div>
+
+    <!-- OFFICES -->
+    <div class="contact-info">
         <div class="offices">
-            <?php if (have_rows('offices','option')) : ?>
-                <?php while (have_rows('offices','option')) : the_row(); ?>
-                    <div class="office">
-                        <div class="title">
-                            <?php the_sub_field('title'); ?>
-                        </div>
-                        <div class="address">
-                            <?php the_sub_field('address'); ?>
-                        </div>
-                        <a class="phone" href="tel:+1<?php the_sub_field('phone_number_unstyled'); ?>"><?php the_sub_field('phone_number_styled'); ?></a>
-                    </div>
-                <?php endwhile; ?>
-            <?php else : ?>
-                <?php // no rows found ?>
-            <?php endif; ?>
+            <?php if (have_rows('offices', 'option')) : while (have_rows('offices', 'option')) : the_row(); ?>
+                <div class="title"><?php the_sub_field('title'); ?> Office</div>
+                <div class="address"><?php the_sub_field('address'); ?></div>
+                <a class="directions" href="<?php the_sub_field('directions_url'); ?>">Get Directions</a>
+            <?php endwhile; else : endif; ?>
         </div>
-    </section>
+        <div class="phone">
+            <div class="item">
+                <div class="title">Toll Free</div>
+                <a href="tel:+18882787878">888-278-7878</a>
+            </div>
+            <div class="item">
+                <div class="title">Los Angeles</div>
+                <a href="tel:+13104784349">310-478-4349</a>
+            </div>
+            <div class="item">
+                <div class="title">Oakland/div>
+                <a href="tel:+10000000000">000-000-0000</a>
+            </div>
+        </div>
+        <div class="social">
+            <a class="linkedin" href="<?php the_field('linkedin','option'); ?>" target="_blank">LinkedIn</a>
+            <a class="twitter" href="<?php the_field('twitter','option'); ?>" target="_blank">Twitter</a>
+            <a class="facebook" href="<?php the_field('facebook','option'); ?>" target="_blank">Facebook</a>
+            <a class="google" href="<?php the_field('google','option'); ?>" target="_blank">Google +</a>
+        </div>
+    </div>
+        
     <!-- SUBFOOTER -->
-    <section class="subfooter">
-        <div class="copyright">
-            &copy; <?php echo date('Y'); ?> Carr Law. All Rights Reserved.
-            <a href="<?= get_permalink(55); ?>">Disclaimer</a>
-            <a href="<?= get_permalink(55); ?>">Privacy Policy</a>
-            <a target="_blank" href="http://<?php the_field('google_plus', 'option'); ?>">Google +</a>
-        </div>
+    <div class="subfooter">
+        <div class="copyright">&copy; <?php echo date('Y'); ?> Mathew & George • All Rights Reserved • <a href="<?= get_permalink(15); ?>">Disclaimer</a></div>
         <div class="ilawyer">
             <a href="http://www.ilawyermarketing.com" target="_blank">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="5.5 46 88.8 8.8" enable-background="new 5.5 46 88.8 8.8" xml:space="preserve">
@@ -132,7 +140,9 @@
         </svg>
             </a>
         </div>
-    </section>
+    </div>
+
+
 </footer>
 
 <?php wp_footer(); ?>	

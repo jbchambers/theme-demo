@@ -10,37 +10,32 @@
 
 </head>
 	<body <?php body_class(); ?> >
-		
+	    <!-- HEADER -->
 		<header>
-            <div class="top">
-                <div class="logo">
-                    <a href="<?= get_home_url(); ?>"><img class="img-responsive center-block" src="<?= get_stylesheet_directory_uri(); ?>/images/logo.svg" alt=""/></a>
-                </div>
-                <div class="phone">
-                    <a href="tel:+15555555555">555.555.5555</a>
-                </div>
-                <div class="menu-toggle">
-                    Menu Toggle
-                </div>
+            <div class="logo">
+                <a href="<?= get_home_url(); ?>"><img class="img-responsive center-block" src="<?= get_stylesheet_directory_uri(); ?>/images/mathewgeorge-logo.svg" alt=""/></a>
             </div>
             <?php wp_nav_menu(['theme_location' => 'main_menu', 'menu_id' => 'menu-header']); ?>
+            <div class="phone">
+                <a href="tel:+18882787878">888.278.7878</a>
+                <span>Free Consultations</span>
+            </div>
+            <div class="menu-toggle">
+                Menu Toggle
+            </div>
 		</header>
+
         <!-- BANNER -->
         <section class="banner">
-            <div class="container">
-                <div class="title"><?php the_field('banner_title','option'); ?></div>
-                <?php if (is_page('home')) { ?>
-                    <div class="tagline"><?php the_field('banner_tagline', 'option'); ?></div>
-                <?php } ?>
-                <?php if (!is_page('home')) { ?>
-                    <a class="btn" href="#form">Get Your Free Consultation</a>
-                <?php } ?>
-                <?php if (is_page('home')) { ?>
-                    <div class="form">
-                        <div class="title">Request Your Free Consultation</div>
-                        <?php gravity_form(1, false, true, false, null, false); ?>
-                    </div>
-                    <a class="scroll animated infinite bounce" href="#more">Scroll Down</a>
-                <?php } ?>
-            </div>
+            <?php if (is_page('home')) { ?>
+                <div class="video"></div>
+            <?php } ?>
+            <div class="title"><?php the_field('banner_title','option'); ?></div>
+            <?php if (is_page('home')) { ?>
+                <div class="tagline"><?php the_field('banner_tagline', 'option'); ?></div>
+            <?php } ?>
+            <a href="#">Request a <span>free</span> consultation</a>
+            <?php if (is_page('home')) { ?>
+                <a class="scroll" href="#">Scroll Down</div>
+            <?php } ?>
         </section>

@@ -7,6 +7,7 @@
         </div>
         <div class="sidebar column">
             <div class="menu-wrap">
+                <div class="pa-title">Practice Areas</div>
                 <?php wp_nav_menu(['menu' => 'Practice Areas']); ?>
             </div>
         </div>

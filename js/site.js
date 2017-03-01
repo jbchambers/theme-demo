@@ -11,6 +11,7 @@ jQuery(document).ready(function () {
     });
     jQuery(".sidebar .menu-item-has-children").click(function ($) {
         jQuery(this).toggleClass('open');
+        jQuery('.menu-item-has-children.open').removeClass('open');
     });
     jQuery(".banner > a").click(function (event) {
         event.preventDefault();
@@ -54,4 +55,5 @@ jQuery(document).ready(function () {
             }
         });
     });
+    jQuery('select').niceSelect();
 });
