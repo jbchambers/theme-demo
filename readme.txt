@@ -42,7 +42,7 @@ ENTER "ILAWYER" THEME FOLDER
 cd ilawyer
 
 =================================
-INSTALL GULP, SASS, BROWSER SYNC
+INSTALL GULP, SCSS, BROWSER SYNC
 =================================
 npm install
 
