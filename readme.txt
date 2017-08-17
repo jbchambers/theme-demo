@@ -12,6 +12,7 @@ cd new-project
 ===================
 DOWNLOAD WORDPRESS
 ===================
+(this only works if you have WP-CLI installed - http://wp-cli.org)
 wp core download
 
 ==========================
@@ -22,7 +23,8 @@ cd wp-content
 =========================================
 ADD STANDARD PLUGINS TO "PLUGINS" FOLDER
 =========================================
-git clone http://tinyurl.com/ilawyerplugins plugins
+git clone http://tinyurl.com/ilawyerplugins plugins-new
+(delete out old plugins folder and rename "plugins-new" to "plugins")
 
 ======================
 ENTER "THEMES' FOLDER
