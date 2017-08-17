@@ -1,4 +1,6 @@
 jQuery(document).ready(function () {
+
+    // DROPDOWN MENUS
     jQuery(".menu-toggle").click(function ($) {
         jQuery(this).toggleClass("open");
         jQuery('#menu-header').slideToggle("slow");
@@ -13,10 +15,8 @@ jQuery(document).ready(function () {
         jQuery(this).toggleClass('open');
         jQuery('.menu-item-has-children.open').removeClass('open');
     });
-    jQuery(".banner > a").click(function (event) {
-        event.preventDefault();
-        jQuery.smoothScroll({scrollTarget: (this).hash});
-    });
+
+    // MATCH HEIGHT
     jQuery('.column').matchHeight();
     jQuery('.sub-column').matchHeight();
     jQuery('.employee').matchHeight();
@@ -24,6 +24,8 @@ jQuery(document).ready(function () {
     jQuery('.item').matchHeight();
     jQuery('.item').matchHeight();
     jQuery('.practice-areas .item').matchHeight();
+
+    // SLICK CAROUSELS
     jQuery(".success-stories-carousel").slick({infinite: true, dots: true, arrows: false, slidesToShow: 3, slidesToScroll: 1, responsive: [
         {breakpoint: 1199, settings: {slidesToShow: 1, infinite: true}}
     ]});
@@ -31,6 +33,9 @@ jQuery(document).ready(function () {
         {breakpoint: 1199, settings: {slidesToShow: 1, infinite: true}}
     ]});
     jQuery(".testimonials-carousel").slick({infinite: true, dots: true, arrows: false, slidesToShow: 1, slidesToScroll: 1});
+
+
+    // SMOOTH SCROLL
     jQuery(function ($) {
         jQuery('a[href*="#more"]:not([href="#"])').click(function ($) {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -55,5 +60,7 @@ jQuery(document).ready(function () {
             }
         });
     });
+
+    // ENABLE NICE SELECT
     jQuery('select').niceSelect();
 });
