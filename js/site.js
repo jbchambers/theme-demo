@@ -60,7 +60,4 @@ jQuery(document).ready(function () {
             }
         });
     });
-
-    // ENABLE NICE SELECT
-    jQuery('select').niceSelect();
 });
