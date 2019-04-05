@@ -1,0 +1,107 @@
+#form {
+  .title {
+    font: 50px/1 $ol;
+    text-transform: uppercase;
+    color: $light;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}
+
+.nice-select {
+  width: 100%;
+  height: 96px;
+  box-shadow: 5px 5px 5px transparentize(#000,.85);
+  border: 1px solid transparentize(#000,.9) !important;
+  border-radius: 0;
+  font: 18px/34px $l;
+  padding: 30px;
+  color: transparentize($black,.5);
+  .option {
+    width: 100%;
+  }
+}
+
+.gform_wrapper {
+  label {
+    display: none;
+  }
+  li {
+    padding: 0;
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+    &:before {
+      display: none;
+    }
+  }
+  input, textarea {
+    width: 100%;
+    box-shadow: 5px 5px 5px transparentize(#000,.85);
+    padding: 30px;
+    border: 1px solid transparentize(#000,.9);
+    font: 18px/34px $l;
+    color: $black;
+  }
+  textarea {
+    height: 431px;
+  }
+  #field_1_2, #field_1_4 {
+    margin-right: 3%;
+  }
+  #field_1_5 {
+    margin-top: -333px;
+  }
+  #field_1_7 {
+    display: none;
+  }
+  .gform_footer {
+    clear: both;
+    padding-top: 65px;
+    padding-bottom: 95px;
+  }
+  input[type=submit] {
+    display: block;
+    border: 0;
+    box-shadow: none;
+    background: $orange;
+    color: #fff;
+    font: 20px/1 $or;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 350px;
+    margin: auto;
+    border-radius: 40px;
+    &:hover {
+      background: $dark;
+      transform: translateY(-10px);
+    }
+  }
+  ::-webkit-input-placeholder { /* Chrome */ 
+    color: transparentize($black,.5) !important;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: transparentize($black,.5) !important;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: transparentize($black,.5) !important;
+    opacity: 1 !important;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: transparentize($black,.5) !important;
+    opacity: 1 !important;
+  }
+  @media (max-width: 767px) {
+    li {
+      width: 100%;
+      margin-right: 0;
+    }
+    #field_1_5 {
+      margin-top: 0;
+    }
+    .gform_footer {
+      padding-top: 30px;
+      padding-bottom: 70px;
+    }
+  }
+}

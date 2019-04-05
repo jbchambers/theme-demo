@@ -1,0 +1,128 @@
+.banner {
+  background: url(../img/banner.png) 0 0 / cover no-repeat;
+  height: 400px;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  margin-top: 110px;
+
+  .wrap {
+    width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .caption {
+    font: 25px/1 $ox;
+    margin-bottom: 20px;
+  }
+  .title {
+    font: 40px/1 $pr;
+    margin-bottom: 30px;
+  }
+  a {
+    display: block;
+    background: $orange;
+    color: #fff;
+    width: 400px;
+    margin: auto;
+    font: 20px/1 $or;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 30px 0;
+    margin-bottom: -35px;
+    border-radius: 40px;
+    transition: all .5s ease-in-out;
+    &:hover {
+      background: $dark;
+      transform: translateY(-10px);
+    }
+  }
+  @media (max-width: 991px) {
+    margin-top: 90px;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.banner-home {
+  background: url(../img/banner-home.png) center center / cover no-repeat;
+  height: 700px;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  .title {
+    font: 80px/90px $pr;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 767px) {
+    height: 200px;
+    margin-bottom: 30px;
+    display: flex;
+    .title, .tagline, a {
+      display: none;
+    }
+    .caption {
+      margin-bottom: 50px;
+    }
+    .wrap {
+      width: 100%;
+    }
+  }
+}
+
+.banner-title-alt {
+  font: 40px/55px $pr;
+  color: $black;
+  text-align: center;
+  width: 260px;
+  margin: 0 auto 25px;
+  display: none;
+}
+
+.banner-btn-alt {
+  display: block;
+  background: $orange;
+  color: #fff;
+  width: 280px;
+  margin: auto;
+  font: 16px/1 $or;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px 0;
+  margin-bottom: 35px;
+  border-radius: 40px;
+  transition: all .5s ease-in-out;
+  text-align: center;
+  display: none;
+  &:hover {
+    background: $dark;
+    transform: translateY(-10px);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .banner-title-alt, .banner-btn-alt {
+    display: block;
+  }
+}
+
+.mobile-btn {
+  display: none;
+  background: $dark;
+  color: #fff;
+  width: 100%;
+  margin: auto;
+  font: 20px/1 $or;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+  top: 90px;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}

@@ -11,7 +11,7 @@
     </div>
   <?php endwhile;
   else : ?>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+    <p class="error">We cannot find the content you are looking for. Please <a href="<?= get_home_url(); ?>">click here</a> to return to the homepage. We apologize for any inconvenience.</p>
   <?php endif; ?>
 </div>
 <?php get_footer(); ?>

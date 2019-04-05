@@ -1,0 +1,125 @@
+.locations {
+  .section-title {
+    width: calc(100% - 40px);
+    font: 30px/60px $or;
+    text-transform: uppercase;
+    color: $light;
+    text-align: center;
+    margin: 0 auto 40px;
+    display: none;
+  }
+  .left {
+    width: 35%;
+    background: #ebebeb;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 60px;
+  }
+  .right {
+    width: 65%;
+    overflow: hidden;
+  }
+  .item {
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+    max-height: 400px;
+    overflow: hidden;
+  }
+  .title {
+    font: 20px/1 $or;
+    text-transform: uppercase;
+    color: $dark;
+    margin-bottom: 45px;
+  }
+  .address {
+    font: 16px/30px $pr;
+    color: $dark;
+    margin-bottom: 45px;
+  }
+  .phone, .fax {
+    position: relative;
+    width: 50%;
+    float: left;
+    font: 16px/1 $or;
+    text-transform: uppercase;
+    color: $light;
+    &:before {
+      content: 'Phone';
+      display: block;
+      color: $dark;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+  }
+  .fax {
+    &:before {
+      content: 'Fax';
+    }
+  }
+  @media (max-width: 767px) {
+    .left {
+      padding-left: 20px;
+    }
+    .right, .embed-container {
+      min-height: 300px;
+    }
+    .item {
+      max-height: none;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.subfooter {
+  padding: 50px 0;
+  img {
+    float: right;
+  }
+  .copyright {
+    font: 14px/1 $l;
+    color: $black;
+  }
+  @media (max-width: 767px) {
+    padding-top: 0;
+    .copyright {
+      width: 246px;
+      margin: 0 auto 40px;
+      line-height: 40px;
+    }
+    img {
+      float: none;
+      margin: auto;
+      display: block;
+    }
+  }
+}
+
+.social {
+  margin-bottom: 20px;
+  a {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    &.google {
+      background: url(../img/logo-google-plus.png) center center no-repeat;
+    }
+    &.facebook {
+      background: url(../img/logo-facebook.png) center center no-repeat;
+    }
+    &.linkedin {
+      background: url(../img/logo-linkedin.png) center center no-repeat;
+    }
+    &.twitter {
+      background: url(../img/logo-twitter.png) center center no-repeat;
+    }
+    &:hover {
+      opacity: .5;
+      transform: translateY(-10px);
+    }
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}

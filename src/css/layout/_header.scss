@@ -1,0 +1,224 @@
+header {
+  height: 110px;
+  position: fixed; 
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  @media (max-width: 991px) {
+    height: 90px;
+  }
+}
+
+.header-logo {
+  padding-top: 32px;
+  padding-left: 40px;
+  img {
+    max-width: 430px;
+  }
+  @media (max-width: 991px) {
+    padding-top: 18px;
+    padding-left: 20px;
+    img {
+      max-width: 200px;
+    }
+  }
+}
+
+.header-phone {
+  background: $grey;
+  position: absolute;
+  right: 120px;
+  top: 0;
+  height: 110px;
+  padding: 23px 30px 0;
+  a {
+    font: 40px/1 $pr;
+    text-decoration: none;
+    font-variant-numeric: lining-nums;
+    position: relative;
+    color: $light;
+    &:before {
+      content: 'free consultation';
+      display: block;
+      font: 14px/1 $pb;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 991px) {
+    background: transparent;
+    top: 45px;
+    right: auto;
+    left: 50px;
+    padding: 0;
+    a {
+      font-size: 0;
+      &:before {
+        content: 'call us now';
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  background: $orange;
+  width: 120px;
+  height: 110px;
+  padding-top: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  .title {
+    font: 14px/1 $pb;
+    color: #fff;
+    padding-left: 33px;
+    margin-bottom: 17px;
+    transition: all .5s ease-in-out;
+  }
+  i {
+    width: 55px;
+    height: 5px;
+    background: #fff;
+    display: block;
+    margin: 0 auto 7px;
+    transition: all .5s ease-in-out;
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/menu-close.png) center center no-repeat $dark;
+    top: 0;
+    right: -100%;
+    transition: all .5s ease-in-out;
+    display: none;
+  }
+  &.open {
+    background: $dark;
+    &:after {
+      right: 0;
+    }
+    .title {
+      opacity: 0;
+    }
+    i {
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg)translate(6px,-10px);
+      }
+      &:nth-child(4) {
+        opacity: 0;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    height: 90px;
+    width: 80px;
+    padding-top: 17px;
+    text-align: center;
+    .title {
+      padding-left: 0;
+    }
+    i {
+      width: 40px;
+    }
+  }
+}
+
+.main-nav {
+  position: absolute;
+  top: 110px;
+  right: -450px;
+  width: 450px;
+  background: $dark;
+  z-index: 9999;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+  ul {
+    margin: 0;
+    padding: 20px 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &:before {
+      display: none;
+    }
+  }
+  a {
+    font: 18px/1 $ol;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: lowercase;
+    padding: 25px 45px;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    &:before {
+      content: '';
+      width: 8px;
+      height: 40px;
+      background: #fff;
+      position: absolute;
+      left: -8px;
+      top: 15px;
+      transition: all .5s ease-in-out;
+    }
+    &:hover {
+      &:before {
+        left: 0;
+      }
+    }
+  }
+  .current-menu-item {
+    a {
+      font-weight: bold;
+      &:before {
+        left: 0;
+      }
+    }
+  }
+  .sub-menu {
+    margin-left: 60px;
+    padding: 0;
+    display: none;
+    a {
+      padding: 15px;
+      &:before {
+        display: none;
+      }
+    }
+    .sub-menu {
+      opacity: 0;
+      transition: all .5s ease-in-out;
+      margin-left: 30px;
+      display: block;
+      height: 0;
+      transform: translateX(-15px);
+    }
+    .menu-item-has-children {
+      &:hover {
+        >.sub-menu {
+          display: block;
+          opacity: 1;
+          height: auto;
+          transform: translateX(0px);
+        }
+      }
+    }
+  }
+  &.open {
+    right: 0;
+  }
+  @media (max-width: 991px) {
+    top: 90px;
+    width: 100%;
+    right: -100%;
+  }
+}

@@ -25,10 +25,12 @@ function theme_name_scripts()
 
   wp_enqueue_script('slick-carousel.js', get_template_directory_uri() . '/js/slick.js', array('jquery'), '', true);
   wp_enqueue_script('match-height.js', get_template_directory_uri() . '/js/match-height.js', array('jquery'), '', true);
+  wp_enqueue_script('nice-select.js', get_template_directory_uri() . '/js/nice-select.js', array('jquery'), '', true);
   wp_enqueue_script('main', get_template_directory_uri() . '/js/site.js',
     array('jquery',
       'slick-carousel.js',
-      'match-height.js'), '', true);
+      'match-height.js',
+      'nice-select.js'), '', true);
 }
 
 add_action('wp_enqueue_scripts', 'theme_name_scripts');
@@ -154,3 +156,5 @@ function fix_reviews_plugin()
 }
 
 add_action('wp_enqueue_scripts', 'fix_reviews_plugin');
+
+add_filter( 'https_ssl_verify', '__return_false' );
